@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app"></div>
+  <form id="form" action="" method="POST" onsubmit="subFunc(event)">
+    <input type="text" id="val" name="val"/>
+    <input type="submit"/>
+  </form>
+<script>
+  document.cookie = `vals=["value0","value1","value2"]; expires=Thu, 18 Dec 2096 12:00:00 UTC; path=/`
+  const vals = document.cookie[0]
+  console.log(document.cookie)
+  async function main(){
+    document.getElementById('app').innerHTML = ""
+    vals.forEach((val,ind)=>{
+    let p = document.createElement('p')
+    p.innerHTML = val
+    console.log(document.cookie)
+    document.getElementById('app').appendChild(p)
+  })
+  }
+  main()
+  function subFunc(event){
+    event.preventDefault()
+    vals.push(document.getElementById('val').value)
+    document.getElementById('val').value = ""
+    main()
+  }
+</script>
+</body>
+</html>

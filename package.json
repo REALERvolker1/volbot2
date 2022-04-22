@@ -1,0 +1,25 @@
+{
+  "name": "volbot2",
+  "version": "1.0.0",
+  "description": "discord bot I made",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc && node index.js",
+    "reg": "node assets/init.js"
+  },
+  "keywords": [],
+  "author": "volker1",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "@discordjs/rest": "^0.4.1",
+    "chalk": "^5.0.1",
+    "figlet": "^1.5.2",
+    "giphy-api": "^2.0.2",
+    "minecraft-player": "^1.0.1",
+    "txtgen": "^3.0.1",
+    "uwuifier": "^4.0.5",
+    "zalgo-js": "^1.0.0"
+  }
+}
