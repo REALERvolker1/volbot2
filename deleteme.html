@@ -13,15 +13,14 @@
     <input type="submit"/>
   </form>
 <script>
-  document.cookie = `vals=["value0","value1","value2"]; expires=Thu, 18 Dec 2096 12:00:00 UTC; path=/`
-  const vals = document.cookie[0]
-  console.log(document.cookie)
+  //localStorage.setItem("vals",`["value0","value1","value2"]`)
+  const vals = JSON.parse(localStorage.getItem("vals"))
+  console.log(vals)
   async function main(){
     document.getElementById('app').innerHTML = ""
     vals.forEach((val,ind)=>{
     let p = document.createElement('p')
     p.innerHTML = val
-    console.log(document.cookie)
     document.getElementById('app').appendChild(p)
   })
   }
