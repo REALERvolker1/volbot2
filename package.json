@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc && node index.js",
     "reg": "node assets/init.js",
-		"commit": "git pull && git commit -a -m test && git push"
+		"commit": "git pull && git commit -a -m automated-commit && git push"
   },
   "keywords": [],
   "author": "volker1",
