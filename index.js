@@ -5,7 +5,7 @@ import {logInteraction, logEdit, logMessage} from './logger.js'
 import {embedSend} from './__commands__.js'
 import {botToken} from './private/secret.mjs'
 const client = new dc.Client({intents: [`GUILDS`,`GUILD_MEMBERS`,`GUILD_BANS`,`GUILD_EMOJIS_AND_STICKERS`,`GUILD_INTEGRATIONS`,`GUILD_WEBHOOKS`,`GUILD_INVITES`,`GUILD_VOICE_STATES`,`GUILD_PRESENCES`,`GUILD_MESSAGES`,`GUILD_MESSAGE_REACTIONS`,`GUILD_MESSAGE_TYPING`,`DIRECT_MESSAGES`,`DIRECT_MESSAGE_REACTIONS`,`DIRECT_MESSAGE_TYPING`,`GUILD_SCHEDULED_EVENTS`]})
-
+var testCommandThingIdk = ""
 client.commands = new dc.Collection()
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'))
 for (const file of commandFiles) {
