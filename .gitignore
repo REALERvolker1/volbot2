@@ -42,6 +42,7 @@ node_modules/
 jspm_packages/
 logs/
 private/
+volbot-2-hosted/
 
 # TypeScript v1 declaration files
 typings/

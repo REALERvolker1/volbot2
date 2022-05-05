@@ -17,9 +17,7 @@
     "chalk": "^5.0.1",
     "figlet": "^1.5.2",
     "giphy-api": "^2.0.2",
-    "minecraft-player": "^1.0.1",
     "txtgen": "^3.0.1",
-    "uwuifier": "^4.0.5",
     "zalgo-js": "^1.0.0"
   }
 }
