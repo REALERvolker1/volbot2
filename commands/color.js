@@ -5,14 +5,18 @@ const comm = {
 		.setName('color')
 		.setDescription('Sends you a random color!'),
 	async execute(interaction) {
-    let col = rgbToHex(rnd(0,255),rnd(0,255),rnd(0,255))
-    let embed = embedSend({
-      title: `Color returned`,
-      response: `color: ${col.replace("0x","#")}`,
-      image: {
-        url: `https://singlecolorimage.com/get/${col.replace("0x","")}/100x100`,
-      },
-    })
+		let col = rgbToHex(rnd(0,255),rnd(0,255),rnd(0,255))
+		let embed = embedSend({
+			author: {
+				name: interaction.member.displayName,
+				icon_url: interaction.member.displayAvatarURL(),
+			},
+			title: `Color returned`,
+			response: `color: ${col.replace("0x","#")}`,
+			image: {
+				url: `https://singlecolorimage.com/get/${col.replace("0x","")}/100x100`,
+			},
+		})
 		await interaction.reply(({embeds: [embed]}))
 	},
 }
